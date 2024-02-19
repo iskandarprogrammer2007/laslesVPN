@@ -1,0 +1,134 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 99;
+    background-color: var(--secondaryColor);
+}
+
+.show__header__shrink{
+    box-shadow: 0px 0px 15px var(--primaryColor);
+    background-color: var(--secondaryColor);
+}
+
+main{
+    padding-top: 100px;
+}
+
+.header__nav__right__list{
+    gap: 20px;
+}
+
+.header__nav__right__btns{
+    gap: 20px;
+}
+
+.header__nav__right__list__item{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px;
+    color: var(--textColor);
+    border-bottom: 1.5px solid transparent;
+    transition: 0.3s;
+    position: relative;
+}
+
+.header__nav__right__btns__dark-mode{
+    border: none;
+    background: transparent;
+    color: var(--thirdColor);
+    font-size: 18px;
+}
+
+
+.header__nav__right__btns__dark-mode .fa-sun{
+    display: none;
+}
+
+.dark .header__nav__right__btns__dark-mode .fa-moon{
+    display: none;
+}
+
+.dark .header__nav__right__btns__dark-mode .fa-sun{
+    display: block;
+}
+
+.header__nav__right__btns__hamburger{
+    border: none;
+    background: transparent;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header__nav__right__btns__hamburger span{
+    width: 20px;
+    height: 3px;
+    background: var(--thirdColor);
+    border-radius: 2px;
+}
+
+.header__nav__right__list__close{
+    display: none;
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    background: red;
+    color: var(--secondaryColor);
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+@media(max-width:700px){
+    .header__nav__right__btns__hamburger{
+        display: flex;
+
+    }
+
+    .header__nav__right__list{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: var(--secondaryColor);
+        height: 100vh;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0px 0px 15px var(--primaryColor);
+        transition: 0.4s;
+        z-index: 9999;
+    }
+
+    .header__nav__right__list__item::after{
+        height: 2px;
+    }
+    .show__header__nav__right__list{
+        left: 0; 
+    }
+    .header__nav__right__list__close{
+        position: absolute;
+        display: block;
+        right: 25px;
+        top: 25px; 
+    }
+    
+}
+
+.header__nav__right__btns__sign__in{
+    border: 1px solid transparent;
+    background: var(--secondaryColor);
+    color: var(--thirdColor);
+    font-size: 18px;
+}
+
+.header__nav__right__btns__sign__up{
+    border: 1px solid var(--primaryColor);
+    width: 150px;
+    font-size: 18px;
+    height: 45px;
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-radius: 50px;
+}
+

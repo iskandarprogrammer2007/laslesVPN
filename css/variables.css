@@ -1,0 +1,10 @@
+:root{
+    --primaryColor:#F53838;
+    --secondaryColor:white;
+    --thirdColor:black;
+    --textColor:#4F5665;
+    --heading1Size:60px;
+    --paragraphSize:16px;
+    --shadowColor:#FFECEC;
+    --bodyColor:linear-gradient(white,rgb(253, 247, 247),#E5E5E5);
+}
